@@ -1,489 +1,1251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Raj Singh | Economics & Data Analytics Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+<title>Raj Singh | Economics & Data Analytics Portfolio</title>
+
+<style>
+
+/* ===============================
+   GLOBAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f2;
+    color: #202124;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+
+/* ===============================
+   NAVIGATION
+================================ */
+
+header {
+    background: #70283d;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    min-height: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nav-links a {
+    transition: .2s;
+}
+
+.nav-links a:hover {
+    opacity: .7;
+}
+
+.nav-cv {
+    background: white;
+    color: #70283d;
+    padding: 9px 15px;
+    border-radius: 5px;
+}
+
+
+/* ===============================
+   BUTTONS
+================================ */
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
+}
+
+.btn {
+    display: inline-block;
+    background: #70283d;
+    color: white;
+    padding: 11px 17px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .2s ease;
+    border: 1px solid #70283d;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,.12);
+}
+
+.btn-outline {
+    background: white;
+    color: #70283d;
+}
+
+
+/* ===============================
+   HERO
+================================ */
+
+.hero {
+    background: white;
+    padding: 80px 0 65px;
+    border-bottom: 1px solid #ddd;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #70283d;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 64px;
+    line-height: 1;
+    margin-bottom: 18px;
+}
+
+.hero h2 {
+    font-size: 23px;
+    margin-bottom: 17px;
+    font-weight: 600;
+}
+
+.hero p {
+    color: #5f6368;
+    max-width: 660px;
+    margin-bottom: 28px;
+    font-size: 16px;
+}
+
+
+/* ===============================
+   SKILLS PANEL
+================================ */
+
+.skills-panel {
+    background: #fff;
+    border: 1px solid #ddd8d4;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.04);
+}
+
+.skills-panel h3 {
+    margin-bottom: 22px;
+    font-size: 18px;
+}
+
+.skills-panel h3::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 38px;
+    margin-top: 8px;
+    background: #70283d;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 17px 22px;
+}
+
+.skill {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.skill-icon {
+    color: #70283d;
+    font-size: 18px;
+}
+
+
+/* ===============================
+   SECTION TITLES
+================================ */
+
+section {
+    padding: 65px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #70283d;
+    font-size: 31px;
+}
+
+.section-heading h2::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 45px;
+    background: #70283d;
+    margin: 12px auto 0;
+}
+
+.section-heading p {
+    margin-top: 10px;
+    color: #6b7280;
+}
+
+
+/* ===============================
+   DASHBOARD PROJECTS
+================================ */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #ddd8d4;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 3px 9px rgba(0,0,0,.04);
+    transition: .22s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.09);
+}
+
+.project-image {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.project-placeholder {
+    height: 205px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e7e6e2;
+    color: #777;
+    text-align: center;
+    padding: 20px;
+}
+
+.project-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-body h3 {
+    font-size: 20px;
+    margin-bottom: 7px;
+    line-height: 1.3;
+}
+
+.project-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.tags {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background: #f1f0ed;
+    border: 1px solid #e2dfda;
+    color: #555;
+    font-size: 11px;
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+
+.project-buttons {
+    margin-top: auto;
+}
+
+
+/* ===============================
+   R PROJECTS
+================================ */
+
+.r-section {
+    background: white;
+    border-top: 1px solid #dedbd6;
+    border-bottom: 1px solid #dedbd6;
+}
+
+.r-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.r-card {
+    border: 1px solid #ddd8d4;
+    border-radius: 9px;
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+}
+
+.r-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.r-image {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+    background: #ecebe7;
+}
+
+.r-body {
+    padding: 17px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.r-body h3 {
+    font-size: 16px;
+    line-height: 1.35;
+    margin-bottom: 8px;
+}
+
+.r-body p {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 14px;
+}
+
+.r-body .project-buttons {
+    margin-top: auto;
+}
+
+
+/* ===============================
+   ABOUT
+================================ */
+
+.about-section {
+    padding: 65px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.about-card {
+    background: white;
+    border: 1px solid #ddd8d4;
+    padding: 27px;
+    border-radius: 9px;
+}
+
+.about-card h3 {
+    color: #70283d;
+    margin-bottom: 10px;
+}
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+footer {
+    background: #70283d;
+    color: white;
+    padding: 50px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 65px;
+}
+
+footer h3 {
+    margin-bottom: 14px;
+}
+
+footer p,
+footer a {
+    font-size: 13px;
+    color: #f0e8eb;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,.25);
+    margin-top: 35px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 950px) {
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f5f2;
-      color: #202124;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: min(1180px, 92%);
-      margin: 0 auto;
-    }
-
-    header {
-      background: #70283d;
-      color: white;
-      padding: 18px 0;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      font-size: 14px;
-    }
-
-    .nav-links a:hover {
-      opacity: 0.75;
-    }
-
-    .hero {
-      padding: 90px 0 70px;
-      background: white;
+    .r-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      color: #70283d;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1.6px;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-
-    h1 {
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: 1.05;
-      margin-bottom: 18px;
-    }
-
-    .hero h2 {
-      color: #70283d;
-      font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #5f6368;
-      max-width: 680px;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      border-radius: 7px;
-      font-weight: 700;
-      font-size: 14px;
-      transition: 0.2s ease;
-    }
-
-    .btn-primary {
-      background: #70283d;
-      color: white;
-    }
-
-    .btn-secondary {
-      border: 1px solid #70283d;
-      color: #70283d;
-      background: white;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .hero-card {
-      background: #f5f5f2;
-      border-radius: 18px;
-      padding: 28px;
-      border: 1px solid #e1dfda;
-    }
-
-    .hero-card h3 {
-      color: #70283d;
-      margin-bottom: 16px;
-    }
-
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .tag {
-      background: white;
-      padding: 8px 12px;
-      border-radius: 20px;
-      border: 1px solid #ddd;
-      font-size: 13px;
-    }
-
-    section {
-      padding: 70px 0;
-    }
-
-    .section-title {
-      margin-bottom: 36px;
-    }
-
-    .section-title h2 {
-      font-size: 34px;
-      margin-bottom: 8px;
-    }
-
-    .section-title p {
-      color: #6b7280;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
-    }
-
-    .project-card {
-      background: white;
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid #e1dfda;
-      transition: 0.2s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 26px rgba(0,0,0,0.08);
-    }
-
-    .project-image {
-      height: 260px;
-      background: #ddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #777;
-      font-size: 14px;
-    }
-
-    .project-content {
-      padding: 24px;
-    }
-
-    .project-content h3 {
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-
-    .project-content p {
-      color: #666;
-      margin-bottom: 18px;
-    }
-
-    .project-meta {
-      font-size: 13px;
-      color: #70283d;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-    }
-
-    .about-box {
-      background: white;
-      border: 1px solid #e1dfda;
-      border-radius: 14px;
-      padding: 28px;
-    }
-
-    footer {
-      background: #202124;
-      color: white;
-      padding: 32px 0;
-      margin-top: 30px;
-    }
-
-    footer p {
-      color: #c9c9c9;
-      font-size: 14px;
-    }
-
-    @media (max-width: 800px) {
-      .hero-grid,
-      .projects,
-      .about-grid {
         grid-template-columns: 1fr;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 60px;
-      }
     }
-  </style>
+}
+
+@media (max-width: 650px) {
+
+    .project-grid,
+    .r-grid,
+    .about-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
 </head>
+
 
 <body>
 
-<header>
-  <div class="container">
-    <nav>
-      <div class="logo">Raj Singh</div>
 
-      <div class="nav-links">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </div>
+<!-- ===============================
+     NAVIGATION
+================================ -->
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<div class="logo">
+Raj Singh
+</div>
+
+<div class="nav-links">
+<a href="#projects">Projects</a>
+<a href="#r-projects">R Projects</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+
+<a class="nav-cv" href="files/Raj-Singh-CV.pdf">
+Download CV
+</a>
+</div>
+
+</nav>
+
+</div>
+
 </header>
 
-<main>
 
-  <section class="hero">
-    <div class="container hero-grid">
+<!-- ===============================
+     HERO
+================================ -->
 
-      <div>
-        <div class="eyebrow">Economics · Data Science · Analytics</div>
+<section class="hero">
 
-        <h1>Raj Singh</h1>
+<div class="container hero-grid">
 
-        <h2>Turning complex data into clear, decision-useful insight.</h2>
+<div>
 
-        <p>
-          A portfolio of interactive dashboards, econometric analysis
-          and data projects using Power BI, Tableau, R, Python and SQL.
-        </p>
+<div class="eyebrow">
+ECONOMICS · DATA SCIENCE · ANALYTICS
+</div>
 
-        <div class="buttons">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#" class="btn btn-secondary">Download CV</a>
-        </div>
-      </div>
+<h1>Raj Singh</h1>
 
-      <div class="hero-card" id="skills">
-        <h3>Core Toolkit</h3>
+<h2>
+Turning data into clear, actionable insights.
+</h2>
 
-        <div class="skill-tags">
-          <span class="tag">Power BI</span>
-          <span class="tag">Tableau</span>
-          <span class="tag">R</span>
-          <span class="tag">Python</span>
-          <span class="tag">SQL</span>
-          <span class="tag">Excel</span>
-          <span class="tag">Power Query</span>
-          <span class="tag">DAX</span>
-          <span class="tag">Econometrics</span>
-          <span class="tag">Data Visualisation</span>
-        </div>
-      </div>
+<p>
+I build interactive dashboards and conduct empirical economic analysis
+using Power BI, Tableau, R, SQL and advanced econometric techniques.
+</p>
 
-    </div>
-  </section>
+<div class="buttons">
 
+<a href="#projects" class="btn">
+View Projects
+</a>
 
-  <section id="projects">
-    <div class="container">
+<a href="#" class="btn">
+Tableau Profile Link
+</a>
 
-      <div class="section-title">
-        <h2>Featured Projects</h2>
-        <p>
-          Selected analytics, business intelligence and econometric projects.
-        </p>
-      </div>
+<a href="#r-projects" class="btn">
+R Studio Empirical Reports
+</a>
 
-      <div class="projects">
+<a href="files/Raj-Singh-CV.pdf" class="btn">
+Download CV
+</a>
 
-        <article class="project-card">
-          <div class="project-image">
-            UK Public Spending Dashboard Screenshot
-          </div>
+</div>
 
-          <div class="project-content">
-            <div class="project-meta">
-              POWER BI · POWER QUERY · DAX
-            </div>
-
-            <h3>UK Public Spending</h3>
-
-            <p>
-              Interactive analysis of UK departmental expenditure,
-              budget composition and spending movements using HM Treasury data.
-            </p>
-
-            <div class="buttons">
-              <a href="#" class="btn btn-primary">View Case Study</a>
-              <a href="#" class="btn btn-secondary">Download PBIX</a>
-            </div>
-          </div>
-        </article>
+</div>
 
 
-        <article class="project-card">
-          <div class="project-image">
-            World Development Explorer Screenshot
-          </div>
+<div class="skills-panel">
 
-          <div class="project-content">
-            <div class="project-meta">
-              TABLEAU · WORLD BANK DATA
-            </div>
+<h3>Core Skills</h3>
 
-            <h3>World Development Explorer</h3>
+<div class="skills-grid">
 
-            <p>
-              Interactive global dashboard exploring GDP, life expectancy,
-              unemployment and access to electricity across countries and time.
-            </p>
+<div class="skill">
+<span class="skill-icon">▥</span>
+Power BI
+</div>
 
-            <div class="buttons">
-              <a href="#" class="btn btn-primary">Interactive Dashboard</a>
-            </div>
-          </div>
-        </article>
+<div class="skill">
+<span class="skill-icon">▦</span>
+Excel
+</div>
 
+<div class="skill">
+<span class="skill-icon">✣</span>
+Tableau
+</div>
 
-        <article class="project-card">
-          <div class="project-image">
-            Global Superstore Dashboard Screenshot
-          </div>
+<div class="skill">
+<span class="skill-icon">⌁</span>
+Power Query
+</div>
 
-          <div class="project-content">
-            <div class="project-meta">
-              POWER BI · COMMERCIAL ANALYTICS
-            </div>
+<div class="skill">
+<span class="skill-icon">R</span>
+R & RStudio
+</div>
 
-            <h3>Global Superstore</h3>
+<div class="skill">
+<span class="skill-icon">▧</span>
+DAX
+</div>
 
-            <p>
-              Commercial dashboard analysing revenue, profitability,
-              customers, products and cancellations across international markets.
-            </p>
+<div class="skill">
+<span class="skill-icon">◆</span>
+Python
+</div>
 
-            <div class="buttons">
-              <a href="#" class="btn btn-primary">View Case Study</a>
-              <a href="#" class="btn btn-secondary">Download PBIX</a>
-            </div>
-          </div>
-        </article>
+<div class="skill">
+<span class="skill-icon">↗</span>
+Econometrics
+</div>
 
+<div class="skill">
+<span class="skill-icon">◎</span>
+SQL
+</div>
 
-        <article class="project-card">
-          <div class="project-image">
-            Econometrics Report Preview
-          </div>
+<div class="skill">
+<span class="skill-icon">◔</span>
+Data Visualisation
+</div>
 
-          <div class="project-content">
-            <div class="project-meta">
-              R · ECONOMETRICS · CAUSAL INFERENCE
-            </div>
+</div>
 
-            <h3>Minimum Wage Impact Analysis</h3>
+</div>
 
-            <p>
-              Empirical analysis using econometric methods and R
-              to investigate labour-market effects of minimum-wage policy.
-            </p>
+</div>
 
-            <div class="buttons">
-              <a href="#" class="btn btn-primary">View Report</a>
-              <a href="#" class="btn btn-secondary">View Code</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
+</section>
 
 
-  <section id="about">
-    <div class="container">
 
-      <div class="section-title">
-        <h2>About</h2>
-      </div>
+<!-- ===============================
+     FEATURED DASHBOARD PROJECTS
+================================ -->
 
-      <div class="about-grid">
+<section id="projects">
 
-        <div class="about-box">
-          <h3>Economics + Data</h3>
-          <p>
-            My work combines economic reasoning with data analysis,
-            statistical modelling and business intelligence to turn
-            complex datasets into useful insights.
-          </p>
-        </div>
+<div class="container">
 
-        <div class="about-box">
-          <h3>What I Build</h3>
-          <p>
-            Interactive dashboards, empirical research, forecasting,
-            analytical reporting and data-driven decision tools.
-          </p>
-        </div>
+<div class="section-heading">
 
-      </div>
-    </div>
-  </section>
+<h2>
+Featured Data Analytics Dashboard Projects
+</h2>
 
-</main>
+</div>
 
+
+<div class="project-grid">
+
+
+<!-- PROJECT 1 -->
+
+<article class="project-card">
+
+<div class="project-placeholder">
+UK Public Spending screenshot goes here
+</div>
+
+<div class="project-body">
+
+<h3>
+UK Public Spending
+</h3>
+
+<p class="project-subtitle">
+Executive analysis of UK departmental expenditure,
+budget composition and spending movements.
+</p>
+
+<div class="tags">
+<span class="tag">Power BI</span>
+<span class="tag">Power Query</span>
+<span class="tag">DAX</span>
+<span class="tag">Data Modelling</span>
+<span class="tag">Drill-through</span>
+</div>
+
+<div class="project-buttons">
+
+<a href="files/UK-Public-Spending.pbix"
+class="btn">
+Download PBIX
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- PROJECT 2 -->
+
+<article class="project-card">
+
+<div class="project-placeholder">
+World Bank Development screenshot
+</div>
+
+<div class="project-body">
+
+<h3>
+World Bank Development Explorer
+</h3>
+
+<p class="project-subtitle">
+Interactive exploration of global GDP, life expectancy,
+unemployment and electricity access across countries and time.
+</p>
+
+<div class="tags">
+<span class="tag">Tableau</span>
+<span class="tag">World Bank</span>
+<span class="tag">Parameters</span>
+<span class="tag">Mapping</span>
+</div>
+
+<div class="project-buttons">
+
+<a href="#" class="btn">
+View Dashboard
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- PROJECT 3 -->
+
+<article class="project-card">
+
+<div class="project-placeholder">
+FIFA World Cup screenshot
+</div>
+
+<div class="project-body">
+
+<h3>
+FIFA World Cup Dashboard
+</h3>
+
+<p class="project-subtitle">
+Interactive analysis of World Cup results,
+team performance and tournament history from 1930–2014.
+</p>
+
+<div class="tags">
+<span class="tag">Tableau</span>
+<span class="tag">Parameters</span>
+<span class="tag">Data Cleaning</span>
+<span class="tag">Visual Analytics</span>
+</div>
+
+<div class="project-buttons">
+
+<a href="#" class="btn">
+View Dashboard
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- PROJECT 4 -->
+
+<article class="project-card">
+
+<div class="project-placeholder">
+Professional Football Club dashboard screenshot
+</div>
+
+<div class="project-body">
+
+<h3>
+Professional Football Club Outreach Data
+</h3>
+
+<p class="project-subtitle">
+Social-media performance and outreach analytics
+dashboard developed for professional football reporting.
+</p>
+
+<div class="tags">
+<span class="tag">Excel</span>
+<span class="tag">Pivot Tables</span>
+<span class="tag">Data Cleaning</span>
+<span class="tag">Dashboards</span>
+</div>
+
+<div class="project-buttons">
+
+<a href="#" class="btn">
+Download File
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- PROJECT 5 -->
+
+<article class="project-card">
+
+<div class="project-placeholder">
+Global Superstore screenshot
+</div>
+
+<div class="project-body">
+
+<h3>
+Global Superstore E-commerce Data
+</h3>
+
+<p class="project-subtitle">
+Commercial analysis of revenue, profitability,
+customers, products and cancellations across global markets.
+</p>
+
+<div class="tags">
+<span class="tag">Power BI</span>
+<span class="tag">DAX</span>
+<span class="tag">KPIs</span>
+<span class="tag">Data Modelling</span>
+</div>
+
+<div class="project-buttons">
+
+<a href="#" class="btn">
+Download PBIX
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- PROJECT 6 -->
+
+<article class="project-card">
+
+<div class="project-placeholder">
+Seattle Airbnb screenshot
+</div>
+
+<div class="project-body">
+
+<h3>
+Seattle Airbnb Data
+</h3>
+
+<p class="project-subtitle">
+Market analysis of Airbnb listings,
+pricing, property characteristics and location.
+</p>
+
+<div class="tags">
+<span class="tag">Tableau</span>
+<span class="tag">Mapping</span>
+<span class="tag">Filters</span>
+<span class="tag">Data Cleaning</span>
+</div>
+
+<div class="project-buttons">
+
+<a href="#" class="btn">
+View Dashboard
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ===============================
+     R PROJECTS
+================================ -->
+
+<section class="r-section" id="r-projects">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h2>
+R Studio Economics & Econometrics Empirical Projects
+</h2>
+
+</div>
+
+
+<div class="r-grid">
+
+
+<!-- R PROJECT 1 -->
+
+<article class="r-card">
+
+<div class="project-placeholder r-image">
+Report preview / graph
+</div>
+
+<div class="r-body">
+
+<h3>
+Oil Price Shocks and Inflation – Structural VAR Approach
+</h3>
+
+<p>
+Empirical analysis of the effect of oil-price shocks
+on inflation dynamics using structural VAR techniques.
+</p>
+
+<div class="tags">
+<span class="tag">R</span>
+<span class="tag">SVAR</span>
+<span class="tag">Time Series</span>
+</div>
+
+<div class="project-buttons">
+
+<a href="#" class="btn">
+View Report PDF
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- R PROJECT 2 -->
+
+<article class="r-card">
+
+<div class="project-placeholder r-image">
+Report preview / DiD graph
+</div>
+
+<div class="r-body">
+
+<h3>
+Disproportionate Effect of UK 2016 National Living Wage
+</h3>
+
+<p>
+Difference-in-Differences analysis of the labour-market
+impact of the National Living Wage across demographic groups.
+</p>
+
+<div class="tags">
+<span class="tag">R</span>
+<span class="tag">DiD</span>
+<span class="tag">Causal Inference</span>
+</div>
+
+<div class="project-buttons">
+
+<a href="#" class="btn">
+View Report PDF
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- R PROJECT 3 -->
+
+<article class="r-card">
+
+<div class="project-placeholder r-image">
+Bangladesh analysis graph
+</div>
+
+<div class="r-body">
+
+<h3>
+Economic Growth and Development Challenges in Bangladesh
+</h3>
+
+<p>
+Empirical investigation into the economic and social
+determinants associated with underdevelopment.
+</p>
+
+<div class="tags">
+<span class="tag">R</span>
+<span class="tag">Regression</span>
+<span class="tag">Development Economics</span>
+</div>
+
+<div class="project-buttons">
+
+<a href="#" class="btn">
+View Report PDF
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- R PROJECT 4 -->
+
+<article class="r-card">
+
+<div class="project-placeholder r-image">
+Argentina inflation analysis graph
+</div>
+
+<div class="r-body">
+
+<h3>
+Inflation in Argentina vs G7 During the COVID Period
+</h3>
+
+<p>
+Comparative economic analysis examining inflation dynamics
+in Argentina relative to major advanced economies.
+</p>
+
+<div class="tags">
+<span class="tag">R</span>
+<span class="tag">Time Series</span>
+<span class="tag">Macroeconomics</span>
+</div>
+
+<div class="project-buttons">
+
+<a href="#" class="btn">
+View Report PDF
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ===============================
+     ABOUT
+================================ -->
+
+<section class="about-section" id="about">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h2>About Me</h2>
+
+</div>
+
+
+<div class="about-grid">
+
+<div class="about-card">
+
+<h3>Economics & Data Science</h3>
+
+<p>
+My work combines economic reasoning, statistical modelling
+and data visualisation to transform complex datasets into
+clear and decision-useful analysis.
+</p>
+
+</div>
+
+
+<div class="about-card">
+
+<h3>Analytics & Business Intelligence</h3>
+
+<p>
+I build interactive dashboards, empirical research,
+forecasting models and analytical tools using Power BI,
+Tableau, R, Python, SQL and Excel.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ===============================
+     FOOTER
+================================ -->
 
 <footer id="contact">
-  <div class="container">
-    <h3>Get in touch</h3>
-    <p>
-      LinkedIn · GitHub · Email
-    </p>
-  </div>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>About Me</h3>
+
+<p>
+Economics and data science graduate with experience
+in analytics, dashboard development and econometric analysis.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<div class="footer-links">
+
+<a href="#projects">
+Projects
+</a>
+
+<a href="#r-projects">
+R Studio Projects
+</a>
+
+<a href="#about">
+About
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h3>Connect</h3>
+
+<div class="footer-links">
+
+<a href="#">
+LinkedIn
+</a>
+
+<a href="https://github.com/Rajs321">
+GitHub
+</a>
+
+<a href="mailto:YOUR-EMAIL-HERE">
+Email
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+© 2026 Raj Singh. All rights reserved.
+</div>
+
+</div>
+
 </footer>
+
 
 </body>
 </html>
