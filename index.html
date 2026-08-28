@@ -8,10 +8,6 @@
 
 <style>
 
-/* ===============================
-   GLOBAL
-================================ */
-
 * {
     margin: 0;
     padding: 0;
@@ -38,11 +34,6 @@ a {
     width: min(1180px, 92%);
     margin: auto;
 }
-
-
-/* ===============================
-   NAVIGATION
-================================ */
 
 header {
     background: #70283d;
@@ -88,11 +79,6 @@ nav {
     border-radius: 5px;
 }
 
-
-/* ===============================
-   BUTTONS
-================================ */
-
 .buttons {
     display: flex;
     flex-wrap: wrap;
@@ -120,11 +106,6 @@ nav {
     background: white;
     color: #70283d;
 }
-
-
-/* ===============================
-   HERO
-================================ */
 
 .hero {
     background: white;
@@ -167,11 +148,6 @@ nav {
     font-size: 16px;
 }
 
-
-/* ===============================
-   SKILLS PANEL
-================================ */
-
 .skills-panel {
     background: #fff;
     border: 1px solid #ddd8d4;
@@ -213,11 +189,6 @@ nav {
     font-size: 18px;
 }
 
-
-/* ===============================
-   SECTION TITLES
-================================ */
-
 section {
     padding: 65px 0;
 }
@@ -247,11 +218,6 @@ section {
     color: #6b7280;
 }
 
-
-/* ===============================
-   DASHBOARD PROJECTS
-================================ */
-
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -279,17 +245,6 @@ section {
     height: 205px;
     object-fit: cover;
     border-bottom: 1px solid #eee;
-}
-
-.project-placeholder {
-    height: 205px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #e7e6e2;
-    color: #777;
-    text-align: center;
-    padding: 20px;
 }
 
 .project-body {
@@ -330,11 +285,6 @@ section {
 .project-buttons {
     margin-top: auto;
 }
-
-
-/* ===============================
-   R PROJECTS
-================================ */
 
 .r-section {
     background: white;
@@ -393,11 +343,6 @@ section {
     margin-top: auto;
 }
 
-
-/* ===============================
-   ABOUT
-================================ */
-
 .about-section {
     padding: 65px 0;
 }
@@ -419,11 +364,6 @@ section {
     color: #70283d;
     margin-bottom: 10px;
 }
-
-
-/* ===============================
-   FOOTER
-================================ */
 
 footer {
     background: #70283d;
@@ -465,13 +405,7 @@ footer a {
     font-size: 12px;
 }
 
-
-/* ===============================
-   RESPONSIVE
-================================ */
-
 @media (max-width: 950px) {
-
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -486,7 +420,6 @@ footer a {
 }
 
 @media (max-width: 650px) {
-
     .project-grid,
     .r-grid,
     .about-grid,
@@ -510,48 +443,27 @@ footer a {
 </style>
 </head>
 
-
 <body>
 
-
-<!-- ===============================
-     NAVIGATION
-================================ -->
-
 <header>
-
 <div class="container">
-
 <nav>
 
-<div class="logo">
-Raj Singh
-</div>
+<div class="logo">Raj Singh</div>
 
 <div class="nav-links">
 <a href="#projects">Projects</a>
 <a href="#r-projects">R Projects</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
-
-<a class="nav-cv" href="files/Raj-Singh-CV.pdf">
-Download CV
-</a>
+<a class="nav-cv" href="files/Raj-Singh-CV.pdf">Download CV</a>
 </div>
 
 </nav>
-
 </div>
-
 </header>
 
-
-<!-- ===============================
-     HERO
-================================ -->
-
 <section class="hero">
-
 <div class="container hero-grid">
 
 <div>
@@ -572,27 +484,13 @@ using Power BI, Tableau, R, SQL and advanced econometric techniques.
 </p>
 
 <div class="buttons">
-
-<a href="#projects" class="btn">
-View Projects
-</a>
-
-<a href="#" class="btn">
-Tableau Profile Link
-</a>
-
-<a href="#r-projects" class="btn">
-R Studio Empirical Reports
-</a>
-
-<a href="files/Raj-Singh-CV.pdf" class="btn">
-Download CV
-</a>
-
+<a href="#projects" class="btn">View Projects</a>
+<a href="#" class="btn">Tableau Profile Link</a>
+<a href="#r-projects" class="btn">R Studio Empirical Reports</a>
+<a href="files/Raj-Singh-CV.pdf" class="btn">Download CV</a>
 </div>
 
 </div>
-
 
 <div class="skills-panel">
 
@@ -600,99 +498,43 @@ Download CV
 
 <div class="skills-grid">
 
-<div class="skill">
-<span class="skill-icon">▥</span>
-Power BI
-</div>
+<div class="skill"><span class="skill-icon">▥</span>Power BI</div>
+<div class="skill"><span class="skill-icon">▦</span>Excel</div>
+<div class="skill"><span class="skill-icon">✣</span>Tableau</div>
+<div class="skill"><span class="skill-icon">⌁</span>Power Query</div>
+<div class="skill"><span class="skill-icon">R</span>R & RStudio</div>
+<div class="skill"><span class="skill-icon">▧</span>DAX</div>
+<div class="skill"><span class="skill-icon">◆</span>Python</div>
+<div class="skill"><span class="skill-icon">↗</span>Econometrics</div>
+<div class="skill"><span class="skill-icon">◎</span>SQL</div>
+<div class="skill"><span class="skill-icon">◔</span>Data Visualisation</div>
 
-<div class="skill">
-<span class="skill-icon">▦</span>
-Excel
 </div>
-
-<div class="skill">
-<span class="skill-icon">✣</span>
-Tableau
-</div>
-
-<div class="skill">
-<span class="skill-icon">⌁</span>
-Power Query
-</div>
-
-<div class="skill">
-<span class="skill-icon">R</span>
-R & RStudio
-</div>
-
-<div class="skill">
-<span class="skill-icon">▧</span>
-DAX
-</div>
-
-<div class="skill">
-<span class="skill-icon">◆</span>
-Python
-</div>
-
-<div class="skill">
-<span class="skill-icon">↗</span>
-Econometrics
-</div>
-
-<div class="skill">
-<span class="skill-icon">◎</span>
-SQL
-</div>
-
-<div class="skill">
-<span class="skill-icon">◔</span>
-Data Visualisation
 </div>
 
 </div>
-
-</div>
-
-</div>
-
 </section>
 
-
-
-<!-- ===============================
-     FEATURED DASHBOARD PROJECTS
-================================ -->
-
 <section id="projects">
-
 <div class="container">
 
 <div class="section-heading">
-
-<h2>
-Featured Data Analytics Dashboard Projects
-</h2>
-
+<h2>Featured Data Analytics Dashboard Projects</h2>
 </div>
-
 
 <div class="project-grid">
 
-
 <!-- PROJECT 1 -->
-
 <article class="project-card">
 
-<div class="project-placeholder">
-UK Public Spending screenshot goes here
-</div>
+<img
+src="images/uk-public-spending.png"
+alt="UK Public Spending Power BI Dashboard"
+class="project-image">
 
 <div class="project-body">
 
-<h3>
-UK Public Spending
-</h3>
+<h3>UK Public Spending</h3>
 
 <p class="project-subtitle">
 Executive analysis of UK departmental expenditure,
@@ -708,33 +550,26 @@ budget composition and spending movements.
 </div>
 
 <div class="project-buttons">
-
-<a href="files/UK-Public-Spending.pbix"
-class="btn">
+<a href="files/UK-Public-Spending.pbix" class="btn">
 Download PBIX
 </a>
-
 </div>
 
 </div>
-
 </article>
 
 
-
 <!-- PROJECT 2 -->
-
 <article class="project-card">
 
-<div class="project-placeholder">
-World Bank Development screenshot
-</div>
+<img
+src="images/world-bank-development.png"
+alt="World Bank Development Explorer Tableau Dashboard"
+class="project-image">
 
 <div class="project-body">
 
-<h3>
-World Bank Development Explorer
-</h3>
+<h3>World Bank Development Explorer</h3>
 
 <p class="project-subtitle">
 Interactive exploration of global GDP, life expectancy,
@@ -749,32 +584,24 @@ unemployment and electricity access across countries and time.
 </div>
 
 <div class="project-buttons">
-
-<a href="#" class="btn">
-View Dashboard
-</a>
-
+<a href="#" class="btn">View Dashboard</a>
 </div>
 
 </div>
-
 </article>
 
 
-
 <!-- PROJECT 3 -->
-
 <article class="project-card">
 
-<div class="project-placeholder">
-FIFA World Cup screenshot
-</div>
+<img
+src="images/fifa-world-cup.png"
+alt="FIFA World Cup Tableau Dashboard"
+class="project-image">
 
 <div class="project-body">
 
-<h3>
-FIFA World Cup Dashboard
-</h3>
+<h3>FIFA World Cup Dashboard</h3>
 
 <p class="project-subtitle">
 Interactive analysis of World Cup results,
@@ -789,32 +616,24 @@ team performance and tournament history from 1930–2014.
 </div>
 
 <div class="project-buttons">
-
-<a href="#" class="btn">
-View Dashboard
-</a>
-
+<a href="#" class="btn">View Dashboard</a>
 </div>
 
 </div>
-
 </article>
 
 
-
 <!-- PROJECT 4 -->
-
 <article class="project-card">
 
-<div class="project-placeholder">
-Professional Football Club dashboard screenshot
-</div>
+<img
+src="images/football-club-dashboard.png"
+alt="Professional Football Club Analytics Dashboard"
+class="project-image">
 
 <div class="project-body">
 
-<h3>
-Professional Football Club Outreach Data
-</h3>
+<h3>Professional Football Club Outreach Data</h3>
 
 <p class="project-subtitle">
 Social-media performance and outreach analytics
@@ -829,32 +648,24 @@ dashboard developed for professional football reporting.
 </div>
 
 <div class="project-buttons">
-
-<a href="#" class="btn">
-Download File
-</a>
-
+<a href="#" class="btn">Download File</a>
 </div>
 
 </div>
-
 </article>
 
 
-
 <!-- PROJECT 5 -->
-
 <article class="project-card">
 
-<div class="project-placeholder">
-Global Superstore screenshot
-</div>
+<img
+src="images/global-superstore.png"
+alt="Global Superstore Power BI Dashboard"
+class="project-image">
 
 <div class="project-body">
 
-<h3>
-Global Superstore E-commerce Data
-</h3>
+<h3>Global Superstore E-commerce Data</h3>
 
 <p class="project-subtitle">
 Commercial analysis of revenue, profitability,
@@ -869,32 +680,24 @@ customers, products and cancellations across global markets.
 </div>
 
 <div class="project-buttons">
-
-<a href="#" class="btn">
-Download PBIX
-</a>
-
+<a href="#" class="btn">Download PBIX</a>
 </div>
 
 </div>
-
 </article>
 
 
-
 <!-- PROJECT 6 -->
-
 <article class="project-card">
 
-<div class="project-placeholder">
-Seattle Airbnb screenshot
-</div>
+<img
+src="images/seattle-airbnb.png"
+alt="Seattle Airbnb Tableau Dashboard"
+class="project-image">
 
 <div class="project-body">
 
-<h3>
-Seattle Airbnb Data
-</h3>
+<h3>Seattle Airbnb Data</h3>
 
 <p class="project-subtitle">
 Market analysis of Airbnb listings,
@@ -909,59 +712,38 @@ pricing, property characteristics and location.
 </div>
 
 <div class="project-buttons">
-
-<a href="#" class="btn">
-View Dashboard
-</a>
-
+<a href="#" class="btn">View Dashboard</a>
 </div>
 
 </div>
-
 </article>
 
-
 </div>
-
 </div>
-
 </section>
 
 
-
-<!-- ===============================
-     R PROJECTS
-================================ -->
-
 <section class="r-section" id="r-projects">
-
 <div class="container">
 
 <div class="section-heading">
-
-<h2>
-R Studio Economics & Econometrics Empirical Projects
-</h2>
-
+<h2>R Studio Economics & Econometrics Empirical Projects</h2>
 </div>
-
 
 <div class="r-grid">
 
 
 <!-- R PROJECT 1 -->
-
 <article class="r-card">
 
-<div class="project-placeholder r-image">
-Report preview / graph
-</div>
+<img
+src="images/svar-oil-inflation.png"
+alt="Oil Price Shocks and Inflation SVAR Analysis"
+class="r-image">
 
 <div class="r-body">
 
-<h3>
-Oil Price Shocks and Inflation – Structural VAR Approach
-</h3>
+<h3>Oil Price Shocks and Inflation – Structural VAR Approach</h3>
 
 <p>
 Empirical analysis of the effect of oil-price shocks
@@ -975,32 +757,24 @@ on inflation dynamics using structural VAR techniques.
 </div>
 
 <div class="project-buttons">
-
-<a href="#" class="btn">
-View Report PDF
-</a>
-
+<a href="#" class="btn">View Report PDF</a>
 </div>
 
 </div>
-
 </article>
 
 
-
 <!-- R PROJECT 2 -->
-
 <article class="r-card">
 
-<div class="project-placeholder r-image">
-Report preview / DiD graph
-</div>
+<img
+src="images/uk-national-living-wage.png"
+alt="UK National Living Wage Difference in Differences Analysis"
+class="r-image">
 
 <div class="r-body">
 
-<h3>
-Disproportionate Effect of UK 2016 National Living Wage
-</h3>
+<h3>Disproportionate Effect of UK 2016 National Living Wage</h3>
 
 <p>
 Difference-in-Differences analysis of the labour-market
@@ -1014,32 +788,24 @@ impact of the National Living Wage across demographic groups.
 </div>
 
 <div class="project-buttons">
-
-<a href="#" class="btn">
-View Report PDF
-</a>
-
+<a href="#" class="btn">View Report PDF</a>
 </div>
 
 </div>
-
 </article>
 
 
-
 <!-- R PROJECT 3 -->
-
 <article class="r-card">
 
-<div class="project-placeholder r-image">
-Bangladesh analysis graph
-</div>
+<img
+src="images/bangladesh-development.png"
+alt="Bangladesh Economic Development Analysis"
+class="r-image">
 
 <div class="r-body">
 
-<h3>
-Economic Growth and Development Challenges in Bangladesh
-</h3>
+<h3>Economic Growth and Development Challenges in Bangladesh</h3>
 
 <p>
 Empirical investigation into the economic and social
@@ -1053,32 +819,24 @@ determinants associated with underdevelopment.
 </div>
 
 <div class="project-buttons">
-
-<a href="#" class="btn">
-View Report PDF
-</a>
-
+<a href="#" class="btn">View Report PDF</a>
 </div>
 
 </div>
-
 </article>
 
 
-
 <!-- R PROJECT 4 -->
-
 <article class="r-card">
 
-<div class="project-placeholder r-image">
-Argentina inflation analysis graph
-</div>
+<img
+src="images/argentina-inflation.png"
+alt="Argentina Inflation Analysis"
+class="r-image">
 
 <div class="r-body">
 
-<h3>
-Inflation in Argentina vs G7 During the COVID Period
-</h3>
+<h3>Inflation in Argentina vs G7 During the COVID Period</h3>
 
 <p>
 Comparative economic analysis examining inflation dynamics
@@ -1092,45 +850,27 @@ in Argentina relative to major advanced economies.
 </div>
 
 <div class="project-buttons">
-
-<a href="#" class="btn">
-View Report PDF
-</a>
-
+<a href="#" class="btn">View Report PDF</a>
 </div>
 
 </div>
-
 </article>
 
-
 </div>
-
 </div>
-
 </section>
 
 
-
-<!-- ===============================
-     ABOUT
-================================ -->
-
 <section class="about-section" id="about">
-
 <div class="container">
 
 <div class="section-heading">
-
 <h2>About Me</h2>
-
 </div>
-
 
 <div class="about-grid">
 
 <div class="about-card">
-
 <h3>Economics & Data Science</h3>
 
 <p>
@@ -1138,12 +878,9 @@ My work combines economic reasoning, statistical modelling
 and data visualisation to transform complex datasets into
 clear and decision-useful analysis.
 </p>
-
 </div>
 
-
 <div class="about-card">
-
 <h3>Analytics & Business Intelligence</h3>
 
 <p>
@@ -1151,101 +888,56 @@ I build interactive dashboards, empirical research,
 forecasting models and analytical tools using Power BI,
 Tableau, R, Python, SQL and Excel.
 </p>
-
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-
-<!-- ===============================
-     FOOTER
-================================ -->
-
 <footer id="contact">
-
 <div class="container">
 
 <div class="footer-grid">
 
-
 <div>
-
 <h3>About Me</h3>
-
 <p>
 Economics and data science graduate with experience
 in analytics, dashboard development and econometric analysis.
 </p>
-
 </div>
 
-
 <div>
-
 <h3>Quick Links</h3>
 
 <div class="footer-links">
-
-<a href="#projects">
-Projects
-</a>
-
-<a href="#r-projects">
-R Studio Projects
-</a>
-
-<a href="#about">
-About
-</a>
-
-<a href="#contact">
-Contact
-</a>
-
+<a href="#projects">Projects</a>
+<a href="#r-projects">R Studio Projects</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
 </div>
-
 </div>
-
 
 <div>
-
 <h3>Connect</h3>
 
 <div class="footer-links">
-
-<a href="#">
-LinkedIn
-</a>
-
-<a href="https://github.com/Rajs321">
-GitHub
-</a>
-
-<a href="mailto:YOUR-EMAIL-HERE">
-Email
-</a>
-
+<a href="#">LinkedIn</a>
+<a href="https://github.com/Rajs321" target="_blank">GitHub</a>
+<a href="mailto:YOUR-EMAIL-HERE">Email</a>
 </div>
 
 </div>
 
-
 </div>
-
 
 <div class="copyright">
 © 2026 Raj Singh. All rights reserved.
 </div>
 
 </div>
-
 </footer>
-
 
 </body>
 </html>
